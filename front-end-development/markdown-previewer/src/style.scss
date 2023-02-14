@@ -1,0 +1,164 @@
+$bgColor: #466a6a;
+$tooltipColor: #428282;
+$mainColor: #334b4b;
+$highlightColor: #4b9696;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#root {
+	background-color: $bgColor;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	margin: auto;
+	padding: 10px;
+	max-width: 800px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+@media screen and (max-width: 850px) {
+	.container {
+		width: 90vw;
+		padding: 10px 0;
+	}
+}
+
+.tooltip {
+	background-color: $tooltipColor;
+	border-bottom: 1px solid #1d2f2f;
+	font-family: "Russo One", sans-serif;
+	font-weight: 500;
+	letter-spacing: 1px;
+	padding: 0.5em 0.8em;
+	position: sticky;
+	width: auto;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 0.4em;
+
+	#toggle-btn {
+		cursor: pointer;
+		margin-left: auto;
+		&:hover {
+			color: $highlightColor;
+		}
+	}
+}
+
+#editor-wrapper,
+#preview-wrapper {
+	border-radius: 6px;
+	box-shadow: 1px 1px 10px 2px #3a5f5f;
+	margin-top: 16px;
+	overflow: hidden;
+}
+
+#editor-wrapper,
+#preview-wrapper,
+#editor {
+	background-color: $mainColor;
+	border: 1px solid #595959;
+	color: #dcdcdc;
+	width: 100%;
+}
+
+#editor-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+}
+
+#editor {
+	font-size: 1.1em;
+	height: 280px;
+	min-height: 120px;
+	outline: none;
+	padding-left: 6px;
+	resize: vertical;
+}
+
+#preview-wrapper {
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+}
+
+#editor,
+#preview {
+	overflow: auto;
+}
+
+#preview {
+	padding: 0 16px;
+
+	h1 {
+		border-bottom: 2px solid $highlightColor;
+	}
+
+	h2 {
+		border-bottom: 1px solid $highlightColor;
+	}
+
+	code {
+		background-color: black;
+		filter: brightness(110%);
+	}
+	pre {
+		@extend code;
+		padding: 0.5em;
+		overflow: auto;
+	}
+
+	blockquote p {
+		border-left: 2px solid $highlightColor;
+		padding-left: 0.5em;
+		color: rgb(163, 206, 206);
+	}
+
+	td,
+	th {
+		border: 2px solid $highlightColor;
+		padding: 0 5px;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.token.operator {
+		background-color: black;
+	}
+}
+
+.footer {
+	text-align: center;
+	font-size: 14px;
+	margin-top: 4px;
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
