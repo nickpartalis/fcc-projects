@@ -1,0 +1,99 @@
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #181A21;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#calculator {
+  background-color: #212532;
+  border: 2px solid #7B7368;
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(4, 5.5rem);
+  grid-template-rows: minmax(7.5rem, auto) repeat(5, 5rem);
+  gap: 8px;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+#display {
+  text-align: right;
+  grid-column: 1 / -1;
+  background-color: #D5E2E2;
+  border-radius: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#upper {
+  font-family: 'Digital-7', sans-serif;
+  font-size: 1.6rem;
+  min-height: 1.6rem;
+}
+
+#lower {
+  font-family: 'Digital-7 Italic', sans-serif;
+  font-size: 4rem;
+}
+
+%btn {
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.8rem;
+  outline: none;
+}
+
+.digit-btn {
+  @extend %btn;
+  background-color: #66615D;
+}
+
+.operation-btn {
+  @extend %btn;
+  font-size: 2rem;
+  background-color: #333849;
+}
+
+.action-btn {
+  @extend %btn;
+  background-color: #DC9F67;
+}
+
+#footer {
+  color: gray;
+  display: block;
+	text-align: center;
+	font-size: 14px;
+	margin-top: 4px;
+
+	a {
+    color: gray;
+		text-decoration: none;
+	}
+}
