@@ -48,3 +48,36 @@ A React app that works as what is commonly known as a Pomodoro timer, which spli
 ![Screenshot_5](https://user-images.githubusercontent.com/4154061/228054629-c991dd89-8ff0-42f6-8fe1-9c5dcf13b0ee.png)
 
 CodePen: https://codepen.io/nickpartalis/full/ZEMzoZR
+
+## Back End Development and APIs course
+
+Five back end projects using Node.js, Express, MongoDB and Mongoose.
+
+### Timestamp Microservice
+
+A simple API that returns the provided timestamp in Unix and UTC format.
+
+Repl: https://fcc-timestamp.nickthegreek3.repl.co/
+
+### Request Header Parser Microservice
+
+A simple API that returns some of the user's information (IP address, software, language).
+
+Repl: https://fcc-headerparser.nickthegreek3.repl.co/
+
+### URL Shortener Microservice
+
+A URL shortener microservice. It receives a link and returns an object with its shortened id (a number). Using the id redirects the user to the original link.
+
+Repl: https://fcc-urlshortener.nickthegreek3.repl.co/
+
+### Exercise Tracker
+
+An exercise tracker microservice. The user can create new users, get all users, assign exercises by user id and get a list of each user's exercises.
+
+Repl: https://fcc-exercisetracker.nickthegreek3.repl.co/
+
+### File Metadata Microservice
+A simple microservice that receives an uploaded file and returns some metadata relevant to that file.
+
+Repl: https://fcc-filemetadata.nickthegreek3.repl.co/
